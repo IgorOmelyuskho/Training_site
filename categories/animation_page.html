@@ -1,0 +1,139 @@
+<!-- Страницу будем размечать при помощи HTML 5 -->
+<!DOCTYPE html>
+<!-- В качестве основного языка страницы указываем 'русский', а также используем элемент в качестве якоря для стрелки 'Наверх' -->
+<html lang="ru" id="pageUp">
+<!-- Оформляем заголовок документа со служебной информацией -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="author" content="Peter Romanovsky">
+    <meta name="copyright" content="belarusweb.net">
+    <meta name="document-state" content="dynamic">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit" content="1">
+    <link rel="stylesheet" href="../site_files/css/styles_1.css">
+    <link rel="stylesheet" href="../site_files/css/animation_page.css">
+</head>
+
+<body>
+    <!-- Главный блок-обертка сайта -->
+    <div id="mainDiv">
+        <!-- Шапка сайта -->
+        <header id="site_header">
+            <!-- Иконка сайта в левом углу -->
+            <img src="../site_files/images/site_icon.png" id="site_icon">
+            <!-- Обычно ссылка ведет на главную страницу сайта -->
+            <a href="http://belarusweb.net">
+                <!-- Имя сайта и слоган -->
+                <div id="site_name">
+                    <!-- Имя сайта я обычно располагаю в заголовке первого уровня. Так что все последующие заголовки будут более низкого уровня -->
+                    <h1 id="site_name_1">belarusweb.net</h1>
+                    <br>
+                    <span id="site_name_2">&nbsp;Основы создания сайтов!</span>
+                </div>
+            </a>
+            <!-- Назовем это заголовком (title) сайта -->
+            <span id="site_slogan">Учебный сайт на HTML+CSS!</span>
+            <!-- Изображения-ссылки на страницы, например, с группами в соцсетях, привязанными к сайту -->
+            <a href="https://vk.com/belarusweb" target="_blank"><img src="../site_files/images/vk_1.png" id="vk_1_icon"></a>
+            <a href="https://ok.ru/group/53857572159678" target="_blank"><img src="../site_files/images/odnkl_1.png" id="odnkl_1_icon"></a>
+            <a href="https://www.facebook.com/belarusweb/" target="_blank"><img src="../site_files/images/fbk_1.png" id="fbk_1_icon"></a>
+        </header>
+        <!-- Боковая панель навигации сайта -->
+        <nav id="site_nav">
+            <!-- Заголовок бокового меню -->
+            <div class="nav_header">Примеры верстки</div>
+            <ul class="nav_menu">
+                <li><a href="../index.html">Стартовая страница</a></li>
+                <li><a href="empty_page.html">Пустая страница</a></li>
+                <li><a href="text_page.html">Шрифты и текст</a></li>
+                <li><a href="list_page.html">Использование списков</a></li>
+                <li><a href="table_page.html">Верстка таблиц</a></li>
+                <li><a href="image_page.html">Работа с изображениями</a></li>
+                <li><a href="map_page.html">Карта-изображение</a></li>
+                <li><a href="form_page.html">Создание форм</a></li>
+                <li style="list-style-image: url('../site_files/images/circle_orange.png');"><a href="animation_page.html">Примеры анимации</a></li>
+            </ul>
+        </nav>
+        <!-- Тут будем отображать основное содержимое страницы -->
+        <section id="mainSection">
+            <h2 class="animation_h_2">Анимация загрузки</h2>
+            <p class="animation_p">
+                Для начала приведем пару простейших примеров анимации для процессов загрузки или установки. В теле документа смотрите элементы, а в таблице стилей в разделе анимации - оформление внешнего вида элементов и создание анимации.
+            </p>
+            <!-- Пример анимации загрузки №1 (оформление анимации смотрите в таблице стилей) -->
+            <div class="animation-download animation_download_1">
+                <div class="download_word">Идет загрузка...</div>
+                <div class="green_stripe"></div>
+            </div>
+            <!-- Пример анимации загрузки №2 -->
+            <div class="animation-download animation_download_2">
+                <div class="download_word_2">Идет загрузка...</div>
+                <div class="grey_stripe"></div>
+            </div>
+            <!-- Пример анимации загрузки №3 -->
+            <div class="animation-download animation_download_3">
+                <div class="download_word_3">Идет загрузка...</div>
+                <div class="blue_stripe"></div>
+            </div>
+            <!-- Пример анимации загрузки №4 -->
+            <div class="animation-download animation_download_4">
+                <div class="download_word_4">Идет загрузка...</div>
+                <div class="orange_stripe"></div>
+            </div>
+            <!-- Пример анимации загрузки №5 -->
+            <div class="animation-download animation_download_5">
+                <img class="animation_img_5" src="../site_files/images/animationImages/download_img_5.png">
+            </div>
+            <h2 class="animation_h_2">Использование анимации в рекламном блоке</h2>
+            <p class="animation_p">
+                Теперь давайте сделаем простейшую анимационную галерею, в которой фото будут обновляться автоматически. Такой прием может пригодиться в рекламе или же, например, на главных страничках сайтов-визиток или лендингов, где будет происходить смена фото с продаваемыми товарами или оказываемыми услугами. Один из таких простейших вариантов показан в данном рекламном блоке. При этом в анимации используется уже не два ключевых кадра, а значительно больше.
+            </p>
+            <!-- Пример рекламного блока №1 -->
+            <div class="animation_adv_1">
+                <!-- Фотогалерея с автоматической сменой изображений -->
+                <div class="animation_img_galery">
+                    <!-- Внутренний блок-обертка для изображений, который мы будем смещать при помощи анимации -->
+                    <div class="animation_galery_wrapper">
+                        <img src="../site_files/images/animationImages/adv_galery/car_1.jpg" class="animation_imgs_1">
+                        <img src="../site_files/images/animationImages/adv_galery/car_2.jpg" class="animation_imgs_1">
+                        <img src="../site_files/images/animationImages/adv_galery/car_3.jpg" class="animation_imgs_1">
+                        <img src="../site_files/images/animationImages/adv_galery/car_4.jpg" class="animation_imgs_1">
+                        <img src="../site_files/images/animationImages/adv_galery/car_5.jpg" class="animation_imgs_1">
+                    </div>
+                </div>
+                <!-- Блок с рекламным текстом -->
+                <div class="animation_adv_text_1">
+                    <div class="animation_text_1">
+                        OOO "Автолохотрон"
+                    </div>
+                    <div class="animation_text_2">
+                        Продажа краденных авто по всему миру!
+                    </div>
+                    <div class="animation_text_2">
+                        Тел. +333-3333-3333-3333
+                    </div>
+                </div>
+            </div>
+            <h2 class="animation_h_2">Летающая тарелка</h2>
+            <p class="animation_p">
+                Ну, что? В принципе некоторую минимальную практику по верстке только лишь на <span class="animation_blue">HTML</span> и
+                <span class="animation_blue">CSS</span> мы получили. Далее не поленитесь ради тренировки сверстать еще и второй небольшой учебный сайт, после чего можете приступать к изучению языка программирования <span class="animation_blue">JavaScript</span>. Там (и далее в ходе изучения связки <span class="animation_blue">PHP+MySQL</span>) мы будем постоянно использовать те или иные возможности
+                <span class="animation_blue">HTML</span> и <span class="animation_blue">CSS</span>, поскольку все технологии представленные на сайте органически дополняют друг друга и вместе позволяют верстать сайты и веб-приложения практически любой сложности. Так что до скорой встречи и не забудьте на прощание кликнуть <a href="animation_page.html#animation_nlo">здесь</a>, ведь транспорт вас уже заждался!
+            </p>
+            <img src="../site_files/images/animationImages/nlo.gif" id="animation_nlo">
+        </section>
+        <!-- Подвал сайта -->
+        <footer id="footer_block">
+            <!-- Стрелка 'Наверх' (символ юникода) -->
+            <a href="animation_page.html#pageUp" id="footer_up">&#9650; Наверх</a>
+            <!-- Блок с информацией об авторских правах -->
+            <address>
+                Copyright © <a href="http://belarusweb.net" target="_blank">belarusweb.net</a> 2017г.
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!-- Страницу будем размечать при помощи HTML 5 -->
+<!DOCTYPE html>
+
+<!-- В качестве основного языка страницы указываем 'русский', а также используем элемент в качестве якоря для стрелки 'Наверх' -->
+<html lang="ru" id="pageUp">
+
+<!-- Оформляем заголовок документа со служебной информацией -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="author" content="Peter Romanovsky">
+    <meta name="copyright" content="belarusweb.net">
+    <meta name="document-state" content="dynamic">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit" content="1">
+    <link rel="stylesheet" href="../site_files/css/styles_1.css">
+    <link rel="stylesheet" href="../site_files/css/empty_page.css">
+</head>	
+	
+<body>	
+<!-- Главный блок-обертка сайта -->
+<div id="mainDiv"> 
+	
+	<!-- Шапка сайта -->
+	<header id="site_header">
+		<!-- Иконка сайта в левом углу -->
+		<img src="../site_files/images/site_icon.png" id="site_icon">
+		
+		<!-- Обычно ссылка ведет на главную страницу сайта -->
+		<a href="http://belarusweb.net">
+			<!-- Имя сайта я обычно располагаю в заголовке первого уровня. Так что все последующие заголовки будут более низкого уровня -->
+			<div id="site_name">
+				<h1 id="site_name_1">belarusweb.net</h1><br>
+				<span id="site_name_2">&nbsp;Основы создания сайтов!</span>
+			</div>
+		</a>
+		
+		<!-- Назовем это заголовком (title) сайта -->	
+		<span id="site_slogan">Учебный сайт на HTML+CSS!</span>
+		
+		<!-- Изображения-ссылки на страницы, например, с группами в соцсетях, привязанными к сайту -->
+		<a href="https://vk.com/belarusweb" target="_blank"><img src="../site_files/images/vk_1.png" id="vk_1_icon"></a>
+		<a href="https://ok.ru/group/53857572159678" target="_blank"><img src="../site_files/images/odnkl_1.png" id="odnkl_1_icon"></a>
+		<a href="https://www.facebook.com/belarusweb/" target="_blank"><img src="../site_files/images/fbk_1.png" id="fbk_1_icon"></a>
+			
+	</header>
+
+	<!-- Боковая панель навигации сайта -->
+	<nav id="site_nav">
+		<!-- Заголовок бокового меню -->
+		<div class="nav_header">Примеры верстки</div>
+		
+		<ul class="nav_menu">
+						
+			<li><a href="../index.html">Стартовая страница</a></li>
+			
+			<!-- Задаем для активной страницы оранжевый маркер пункта списка. Внимательно посмотрите на относительный путь к файлу изображения. -->					
+			<li style="list-style-image: url('../site_files/images/circle_orange.png');"><a href="empty_page.html">Пустая страница</a></li>
+			
+			<li><a href="text_page.html">Шрифты и текст</a></li>
+					
+			<li><a href="list_page.html">Использование списков</a></li>
+			
+			<li><a href="table_page.html">Верстка таблиц</a></li>
+			
+			<li><a href="image_page.html">Работа с изображениями</a></li>
+			
+			<li><a href="map_page.html">Карта-изображение</a></li>
+			
+			<li><a href="form_page.html">Создание форм</a></li>
+			
+			<li><a href="animation_page.html">Примеры анимации</a></li>
+					
+		</ul>
+	</nav>
+
+	
+	
+	<!-- Тут будем отображать основное содержимое страницы -->
+	<section id="mainSection">
+		
+		<!-- Блок-обертка для изображения и абзаца -->
+		<div class="empty_div">
+			<img src="../site_files/images/kapusta.png">
+			<p>
+				<!-- Это важно!))) И поэтому жирно. -->
+				<b>Пусто, выросла капуста!!!</b>
+			</p>
+		</div>
+		
+		
+
+		
+	</section>	
+	
+
+	
+	<!-- Подвал сайта -->
+	<footer id="footer_block">
+		
+		<!-- Стрелка 'Наверх' (символ юникода) -->
+		<a href="categories/empty_page.html#pageUp" id="footer_up">&#9650; Наверх</a>
+		
+		<!-- Блок с информацией об авторских правах --> 
+		<address>
+			Copyright © <a href="http://belarusweb.net" target="_blank">belarusweb.net</a> 2017г.
+		</address> 
+			
+	</footer>
+
+</div>		
+</body>
+</html>

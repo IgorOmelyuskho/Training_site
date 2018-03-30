@@ -1,0 +1,253 @@
+<!-- Страницу будем размечать при помощи HTML 5 -->
+<!DOCTYPE html>
+<!-- В качестве основного языка страницы указываем 'русский', а также используем элемент в качестве якоря для стрелки 'Наверх' -->
+<html lang="ru" id="pageUp">
+<!-- Оформляем заголовок документа со служебной информацией -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="author" content="Peter Romanovsky">
+    <meta name="copyright" content="belarusweb.net">
+    <meta name="document-state" content="dynamic">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit" content="1">
+    <link rel="stylesheet" href="../site_files/css/styles_1.css">
+    <link rel="stylesheet" href="../site_files/css/table_page.css">
+</head>
+
+<body>
+    <!-- Главный блок-обертка сайта -->
+    <div id="mainDiv">
+        <!-- Шапка сайта -->
+        <header id="site_header">
+            <!-- Иконка сайта в левом углу -->
+            <img src="../site_files/images/site_icon.png" id="site_icon">
+            <!-- Обычно ссылка ведет на главную страницу сайта -->
+            <a href="http://belarusweb.net">
+                <!-- Имя сайта я обычно располагаю в заголовке первого уровня. Так что все последующие заголовки будут более низкого уровня -->
+                <div id="site_name">
+                    <h1 id="site_name_1">belarusweb.net</h1>
+                    <br>
+                    <span id="site_name_2">&nbsp;Основы создания сайтов!</span>
+                </div>
+            </a>
+            <!-- Назовем это заголовком (title) сайта -->
+            <span id="site_slogan">Учебный сайт на HTML+CSS!</span>
+            <!-- Изображения-ссылки на страницы, например, с группами в соцсетях, привязанными к сайту -->
+            <a href="https://vk.com/belarusweb" target="_blank"><img src="../site_files/images/vk_1.png" id="vk_1_icon"></a>
+            <a href="https://ok.ru/group/53857572159678" target="_blank"><img src="../site_files/images/odnkl_1.png" id="odnkl_1_icon"></a>
+            <a href="https://www.facebook.com/belarusweb/" target="_blank"><img src="../site_files/images/fbk_1.png" id="fbk_1_icon"></a>
+        </header>
+        <!-- Боковая панель навигации сайта -->
+        <nav id="site_nav">
+            <!-- Заголовок бокового меню -->
+            <div class="nav_header">Примеры верстки</div>
+            <ul class="nav_menu">
+                <li><a href="../index.html">Стартовая страница</a></li>
+                <li><a href="empty_page.html">Пустая страница</a></li>
+                <li><a href="text_page.html">Шрифты и текст</a></li>
+                <li><a href="list_page.html">Использование списков</a></li>
+                <li style="list-style-image: url('../site_files/images/circle_orange.png');"><a href="table_page.html">Верстка таблиц</a></li>
+                <li><a href="image_page.html">Работа с изображениями</a></li>
+                <li><a href="map_page.html">Карта-изображение</a></li>
+                <li><a href="form_page.html">Создание форм</a></li>
+                <li><a href="animation_page.html">Примеры анимации</a></li>
+            </ul>
+        </nav>
+        <!-- Тут будем отображать основное содержимое страницы -->
+        <section id="mainSection">
+            <h2 class="table_h_2">Верстаем простую табличку</h2>
+            <p class="table_p">
+                Внимательно изучите код таблицы в таблице стилей, посмотрите видеоурок, после чего верстайте страницу самостоятельно. Кода немного, так что разобраться не составит большого труда. Также обратите внимание, что у таблицы отсутствует заголовок.
+            </p>
+            <table id="generalTable">
+                <col id="unicodeCol_1">
+                <col id="unicodeCol_2">
+                <col id="unicodeCol_3">
+                <col id="unicodeCol_4">
+                <col>
+                <thead>
+                    <tr>
+                        <th>Символ</th>
+                        <th>Мнемоника</th>
+                        <th>Шестнадцатеричный код Unicode</th>
+                        <th>Десятичный код Unicode</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>&amp;lt;</td>
+                        <td>&amp;#x003C;</td>
+                        <td>&amp;#60;</td>
+                        <td>меньше</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>&amp;gt;</td>
+                        <td>&amp;#x003E;</td>
+                        <td>&amp;#62;</td>
+                        <td>больше</td>
+                    </tr>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>&amp;amp;</td>
+                        <td>&amp;#x0026;</td>
+                        <td>&amp;#38;</td>
+                        <td>амперсанд</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>&amp;nbsp;</td>
+                        <td>&amp;#x00A0;</td>
+                        <td>&amp;#129;</td>
+                        <td>неразрывный пробел</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>&amp;shy;</td>
+                        <td>&amp;#x00AD;</td>
+                        <td>&amp;#173;</td>
+                        <td>мягкий перенос</td>
+                    </tr>
+                    <tr>
+                        <td>§</td>
+                        <td>&amp;sect;</td>
+                        <td>&amp;#x00A7;</td>
+                        <td>&amp;#167;</td>
+                        <td>параграф</td>
+                    </tr>
+                    <tr>
+                        <td>©</td>
+                        <td>&amp;copy;</td>
+                        <td>&amp;#x00A9;</td>
+                        <td>&amp;#169;</td>
+                        <td>знак охраны авторского права</td>
+                    </tr>
+                    <tr>
+                        <td>°</td>
+                        <td>&amp;deg;</td>
+                        <td>&amp;#x00B0;</td>
+                        <td>&amp;#176;</td>
+                        <td>градусы</td>
+                    </tr>
+                    <tr>
+                        <td>–</td>
+                        <td>&amp;ndash;</td>
+                        <td>&amp;#x0096;</td>
+                        <td>&amp;#150;</td>
+                        <td>среднее тире</td>
+                    </tr>
+                    <tr>
+                        <td>—</td>
+                        <td>&amp;mdash;</td>
+                        <td>&amp;#x0097;</td>
+                        <td>&amp;#151;</td>
+                        <td>длинное тире</td>
+                    </tr>
+                    <tr>
+                        <td>±</td>
+                        <td>&amp;plusmn;</td>
+                        <td>&amp;#x00B1;</td>
+                        <td>&amp;#177;</td>
+                        <td>плюс-минус</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+            <p class="table_sign">
+                <span class="table_number">Таблица 1.1.</span> Мнемоники и коды Юникода некоторых символов
+            </p>
+            <h2 class="table_h_2">Калькулятор перевода целых чисел из одной системы счисления в другую</h2>
+            <p class="table_p">
+                Сейчас мы оформим только внешний вид калькулятора, использовав <span class="form_blue">HTML</span> и <span class="form_blue">CSS</span>. Для выравнивания полей калькулятора мы используем таблицу, а позже на страничке создания форм сделаем тоже самое, но уже без нее. Функциональностью калькулятор мы снабдим в ходе изучения языков <span class="form_blue">JavaScript</span> и <span class="form_blue">PHP</span>, при чем сверстаем две версии: клиентскую и серверную.
+            </p>
+            <!-- Внешняя граница калькулятора, т.е. элемент fieldset -->
+            <fieldset id="systemCalc">
+                <!-- Заголовок калькулятора -->
+                <legend id="legendSysCalc">Калькулятор перевода целых чисел A<sub>2-36</sub> &#8644; B<sub>2-36</sub>&nbsp;</legend>
+                <!-- Используем для выравнивания полей таблицу, хотя конечно же можно обойтись и без нее -->
+                <table id="calcTable">
+                    <!-- 1-я строка таблицы -->
+                    <tr>
+                        <!-- В первых ячейках разместим описания полей и свяжем их с полями ввода при помощи элемента 'label' -->
+                        <td>
+                            <div>Исходная система счисления</div>
+                        </td>
+                        <!-- Во второй ячейке находится поле ввода исходной системы счисления -->
+                        <td>
+                            <input id="startSystem" maxlength="2" value="">
+                        </td>
+                        <!-- Третью ячейку зарезервируем для вывода сообщений (например, об ошибках ввода) -->
+                        <td id="startSystemInfo"></td>
+                    </tr>
+                    <!-- 2-я строка таблицы -->
+                    <tr>
+                        <td>
+                            <div>Исходное число</div>
+                        </td>
+                        <!-- Во второй ячейке находится поле ввода числа, которое нужно будет перевести в другую систему счисления -->
+                        <td>
+                            <input id="startNumber" maxlength="200" value="">
+                        </td>
+                        <td id="startNumberInfo"></td>
+                    </tr>
+                    <!-- 3-я строка таблицы -->
+                    <tr>
+                        <td>
+                            <div>Новая система счисления</div>
+                        </td>
+                        <!-- Во второй ячейке находится поле ввода новой системы счисления -->
+                        <td>
+                            <input id="newSystem" maxlength="2" value="">
+                        </td>
+                        <!-- Третью ячейку зарезервируем для вывода сообщений (например, об ошибках ввода) -->
+                        <td id="newSystemInfo"></td>
+                    </tr>
+                    <!-- 4-я строка таблицы -->
+                    <tr>
+                        <td>
+                            <div>Переведенное число</div>
+                        </td>
+                        <!-- Во второй ячейке находится поле вывода числа в новой системе счисления -->
+                        <td>
+                            <input id="newNumber" maxlength="300" readonly>
+                        </td>
+                        <!-- Третью ячейку зарезервируем для вывода сообщений (например, об ошибках ввода) -->
+                        <td id="newNumberInfo"></td>
+                    </tr>
+                    <!-- 5-я строка таблицы -->
+                    <tr>
+                        <!-- Здесь первая ячейка остается пустой -->
+                        <td></td>
+                        <!-- Во второй ячейке находятся кнопки сброса в исходное состояние и перевода -->
+                        <td>
+                            <button id="calcReset">Сброс</button> &nbsp; &nbsp;
+                            <button id="calcButton">Перевести</button>
+                        </td>
+                        <!-- Третью ячейку зарезервируем для вывода сообщений (например, об ошибках ввода) -->
+                        <td id="calcButtonInfo"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <p class="table_p">
+                Как видим таблицы можно использовать не только по прямому назначению, но и для разметки страницы. Раньше (в мире древних людей) этот прием применялся повсеместно. Сейчас же вместо табличной верстки используется блочная верстка, в которой применяются в основном элементы
+                <span class="form_blue">'div'</span> и позиционирование.
+            </p>
+        </section>
+        <!-- Подвал сайта -->
+        <footer id="footer_block">
+            <!-- Стрелка 'Наверх' (символ юникода) -->
+            <a href="../categories/table_page.html#pageUp" id="footer_up">&#9650; Наверх</a>
+            <!-- Блок с информацией об авторских правах -->
+            <address>
+                Copyright © <a href="http://belarusweb.net" target="_blank">belarusweb.net</a> 2017г.
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

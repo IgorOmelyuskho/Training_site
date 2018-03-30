@@ -1,0 +1,438 @@
+<!-- Страницу будем размечать при помощи HTML 5 -->
+<!DOCTYPE html>
+<!-- В качестве основного языка страницы указываем 'русский', а также используем элемент в качестве якоря для стрелки 'Наверх' -->
+<html lang="ru" id="pageUp">
+<!-- Оформляем заголовок документа со служебной информацией -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="author" content="Peter Romanovsky">
+    <meta name="copyright" content="belarusweb.net">
+    <meta name="document-state" content="dynamic">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit" content="1">
+    <link rel="stylesheet" href="../site_files/css/styles_1.css">
+    <link rel="stylesheet" href="../site_files/css/form_page.css">
+</head>
+
+<body>
+    <!-- Главный блок-обертка сайта -->
+    <div id="mainDiv">
+        <!-- Шапка сайта -->
+        <header id="site_header">
+            <!-- Иконка сайта в левом углу -->
+            <img src="../site_files/images/site_icon.png" id="site_icon">
+            <!-- Обычно ссылка ведет на главную страницу сайта -->
+            <a href="http://belarusweb.net">
+                <!-- Имя сайта я обычно располагаю в заголовке первого уровня. Так что все последующие заголовки будут более низкого уровня -->
+                <div id="site_name">
+                    <h1 id="site_name_1">belarusweb.net</h1>
+                    <br>
+                    <span id="site_name_2">&nbsp;Основы создания сайтов!</span>
+                </div>
+            </a>
+            <!-- Назовем это заголовком (title) сайта -->
+            <span id="site_slogan">Учебный сайт на HTML+CSS!</span>
+            <!-- Изображения-ссылки на страницы, например, с группами в соцсетях, привязанными к сайту -->
+            <a href="https://vk.com/belarusweb" target="_blank"><img src="../site_files/images/vk_1.png" id="vk_1_icon"></a>
+            <a href="https://ok.ru/group/53857572159678" target="_blank"><img src="../site_files/images/odnkl_1.png" id="odnkl_1_icon"></a>
+            <a href="https://www.facebook.com/belarusweb/" target="_blank"><img src="../site_files/images/fbk_1.png" id="fbk_1_icon"></a>
+        </header>
+        <!-- Боковая панель навигации сайта -->
+        <nav id="site_nav">
+            <!-- Заголовок бокового меню -->
+            <div class="nav_header">Примеры верстки</div>
+            <ul class="nav_menu">
+                <li><a href="../index.html">Стартовая страница</a></li>
+                <li><a href="empty_page.html">Пустая страница</a></li>
+                <li><a href="text_page.html">Шрифты и текст</a></li>
+                <li><a href="list_page.html">Использование списков</a></li>
+                <li><a href="table_page.html">Верстка таблиц</a></li>
+                <li><a href="image_page.html">Работа с изображениями</a></li>
+                <li><a href="map_page.html">Карта-изображение</a></li>
+                <li style="list-style-image: url('../site_files/images/circle_orange.png');"><a href="form_page.html">Создание форм</a></li>
+                <li><a href="animation_page.html">Примеры анимации</a></li>
+            </ul>
+        </nav>
+        <!-- Тут будем отображать основное содержимое страницы -->
+        <section id="mainSection">
+            <h2 class="form_h_2">Калькулятор перевода целых чисел из одной системы счисления в другую</h2>
+            <p class="form_p">
+                Для начала используем форму для создания калькулятора перевода целых чисел из одной системы счисления в другую. Позже мы сверстаем калькулятор на <span class="form_blue">JavaScript</span> и отдельно на <span class="form_blue">PHP</span>. Пока же оформим только внешний вид калькулятора при помощи <span class="form_blue">HTML</span> и <span class="form_blue">CSS</span>, но на этот раз не будем использовать для разметки таблицу (сравните коды двух вариантов).
+            </p>
+            <!-- Калькулятор перевода чисел из одной системы счисления в другую -->
+            <!-- Внешняя граница калькулятора, т.е. элемент fieldset -->
+            <fieldset id="formSystemCalc">
+                <!-- Заголовок калькулятора -->
+                <legend id="formLegendSysCalc">Калькулятор перевода целых чисел A<sub>2-36</sub> &#8644; B<sub>2-36</sub>&nbsp;</legend>
+                <!-- Форма для отправки данных на сервер для обработки скриптом calc.php -->
+                <form id="formCalcFields" action="php/calc.php" method="post" name="calcForm">
+                    <!-- Поле ввода исходной системы счисления -->
+                    <label for="startSystem">Исходная система счисления</label>
+                    <input class="formInput" id="startSystem" maxlength="2" value="">
+                    <br>
+                    <!-- Поле ввода числа, которое нужно будет перевести в другую систему счисления -->
+                    <label for="startNumber">Исходное число</label>
+                    <input class="formInput" id="startNumber" maxlength="200" value="">
+                    <br>
+                    <!-- Поле ввода новой системы счисления -->
+                    <label for="newSystem">Новая система счисления</label>
+                    <input class="formInput" id="newSystem" maxlength="2" value="">
+                    <br>
+                    <!-- Поле отображения результата перевода, т.е. конечное число -->
+                    <label for="formNewNumber">Переведенное число</label>
+                    <input class="formInput" id="formNewNumber" maxlength="300" readonly>
+                    <br>
+                    <!-- Кнопки сброса формы в исходное состояние и отправки данных на сервер -->
+                    <button id="formCalcReset" type="reset">Сброс</button> &nbsp; &nbsp;
+                    <button id="formCalcSubmit" type="submit">Перевести</button>
+                    <br>
+                </form>
+            </fieldset>
+            <h2 class="form_h_2">Форма регистрации на сайте</h2>
+            <p class="form_p">
+                Теперь давайте сверстаем форму регистрации пользователя. И не думайте, что эта форма довольно объемная, т.к. это всего лишь упрощенная часть реальной формы регистрации на одном из спортивных сайтов сети, которую мне пришлось разрабатывать. Конечно, если не требуется сбор данных о регистрируемых пользователях, то форма может быть и проще. В любом случае, наберитесь терпения и внимательно, шаг за шагом сверстайте предлагаемую форму регистрации, стараясь не копировать готовый код. В полях выбора даты рождения и места проживания обязательно наберите хотя бы по 5 первых строчек списка, чтобы набор кода почуствовали и пальцы.
+            </p>
+            <!--  Блок-обертка для формы -->
+            <div class="reg_block">
+                <!--  Форма для регистрации на сайте -->
+                <form id="regForm" name="regForm" class="regForm" action="php/registration.php" method="POST">
+                    <!-- Первое поле для ввода имени пользователя -->
+                    <label for="firstName"> Имя:<span class="regStar">*</span></label>
+                    <input class="regInput" type="text" id="firstName" name="firstName" maxlength="35">
+                    <br>
+                    <!-- Первое поле для ввода имени пользователя -->
+                    <label for="lastName">Фамилия:<span class="regStar">*</span></label>
+                    <input class="regInput" type="text" id="lastName" name="lastName" maxlength="35">
+                    <br>
+                    <!-- Спрашиваем пол для примера выбора -->
+                    <div class="regSex">
+                        Пол:<span class="regStar">*</span>
+                        <div>
+                            <label>
+                                <input type="radio" name="sex" value="man">мужской</label>
+                            <label>
+                                <input type="radio" name="sex" value="woman">женский</label>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Здесь в одну строку располагаем три поля для ввода полной даты рождения -->
+                    Дата рождения:<span class="regStar">*</span>
+                    <!-- Предлагаем ввести день (числом) -->
+                    <select class="regSelect" id="birthDay" name="birthDay" size="1">
+                        <option value="0">день</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <!-- Предлагаем ввести месяц рождения -->
+                    <select class="regSelect" id="birthMonth" name="birthMonth" size="1">
+                        <option value="0">месяц</option>
+                        <option value="1">января</option>
+                        <option value="2">февраля</option>
+                        <option value="3">марта</option>
+                        <option value="4">апреля</option>
+                        <option value="5">мая</option>
+                        <option value="6">июня</option>
+                        <option value="7">июля</option>
+                        <option value="8">августа</option>
+                        <option value="9">сентября</option>
+                        <option value="10">октября</option>
+                        <option value="11">ноября</option>
+                        <option value="12">декабря</option>
+                    </select>
+                    <!-- Предлагаем ввести год рождения -->
+                    <select class="regSelect" id="birthYear" class="selectYear" name="birthYear" size="1">
+                        <option value="0">год</option>
+                        <option value="1915">1915</option>
+                        <option value="1916">1916</option>
+                        <option value="1917">1917</option>
+                        <option value="1918">1918</option>
+                        <option value="1919">1919</option>
+                        <option value="1920">1920</option>
+                        <option value="1921">1921</option>
+                        <option value="1922">1922</option>
+                        <option value="1923">1923</option>
+                        <option value="1924">1924</option>
+                        <option value="1925">1925</option>
+                        <option value="1926">1926</option>
+                        <option value="1927">1927</option>
+                        <option value="1928">1928</option>
+                        <option value="1929">1929</option>
+                        <option value="1930">1930</option>
+                        <option value="1931">1931</option>
+                        <option value="1932">1932</option>
+                        <option value="1933">1933</option>
+                        <option value="1934">1934</option>
+                        <option value="1935">1935</option>
+                        <option value="1936">1936</option>
+                        <option value="1937">1937</option>
+                        <option value="1938">1938</option>
+                        <option value="1939">1939</option>
+                        <option value="1940">1940</option>
+                        <option value="1941">1941</option>
+                        <option value="1925">1925</option>
+                        <option value="1942">1942</option>
+                        <option value="1943">1943</option>
+                        <option value="1944">1944</option>
+                        <option value="1945">1945</option>
+                        <option value="1946">1946</option>
+                        <option value="1947">1947</option>
+                        <option value="1948">1948</option>
+                        <option value="1949">1949</option>
+                        <option value="1950">1950</option>
+                        <option value="1951">1951</option>
+                        <option value="1952">1952</option>
+                        <option value="1953">1953</option>
+                        <option value="1954">1954</option>
+                        <option value="1955">1955</option>
+                        <option value="1956">1956</option>
+                        <option value="1957">1957</option>
+                        <option value="1958">1958</option>
+                        <option value="1959">1959</option>
+                        <option value="1960">1960</option>
+                        <option value="1961">1961</option>
+                        <option value="1962">1962</option>
+                        <option value="1963">1963</option>
+                        <option value="1964">1964</option>
+                        <option value="1965">1965</option>
+                        <option value="1966">1966</option>
+                        <option value="1967">1967</option>
+                        <option value="1968">1968</option>
+                        <option value="1969">1969</option>
+                        <option value="1970">1970</option>
+                        <option value="1971">1971</option>
+                        <option value="1972">1972</option>
+                        <option value="1973">1973</option>
+                        <option value="1974">1974</option>
+                        <option value="1975">1975</option>
+                        <option value="1976">1976</option>
+                        <option value="1977">1977</option>
+                        <option value="1978">1978</option>
+                        <option value="1979">1979</option>
+                        <option value="1980">1980</option>
+                        <option value="1981">1981</option>
+                        <option value="1982">1982</option>
+                        <option value="1983">1983</option>
+                        <option value="1984">1984</option>
+                        <option value="1985">1985</option>
+                        <option value="1986">1986</option>
+                        <option value="1987">1987</option>
+                        <option value="1988">1988</option>
+                        <option value="1989">1989</option>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                    </select>
+                    <br>
+                    <!-- Спросим место проживания -->
+                    <label for="city">Место проживания:<span class="regStar">*</span></label>
+                    <!-- Предлагаем варианты -->
+                    <select class="regSelect" id="city" name="city" size="1">
+                        <option value="0"></option>
+                        <option value="1">Россия &nbsp&nbsp (Союзное государство)</option>
+                        <option value="2">Другое государство</option>
+                        <option class="mainCity" value="3">Минск &nbsp &nbsp (столица Беларуси)</option>
+                        <option value="4">Березино &nbsp&nbsp (Минская обл)</option>
+                        <option value="5">Борисов &nbsp&nbsp (Минская обл)</option>
+                        <option value="6">Вилейка &nbsp&nbsp (Минская обл)</option>
+                        <option value="7">Воложин &nbsp&nbsp (Минская обл)</option>
+                        <option value="8">Дзержинск &nbsp &nbsp(Минская обл)</option>
+                        <option value="9">Жодино &nbsp &nbsp(Минская обл)</option>
+                        <option value="10">Заславль &nbsp &nbsp(Минская обл)</option>
+                        <option value="11">Клецк &nbsp &nbsp(Минская обл)</option>
+                        <option value="12">Копыль &nbsp&nbsp (Минская обл)</option>
+                        <option value="13">Крупки &nbsp &nbsp(Минская обл)</option>
+                        <option value="14">Логойск &nbsp &nbsp(Минская обл)</option>
+                        <option value="15">Любань &nbsp &nbsp(Минская обл)</option>
+                        <option value="16">Марьина Горка &nbsp &nbsp(Минская обл)</option>
+                        <option value="17">Молодечно &nbsp &nbsp(Минская обл)</option>
+                        <option value="18">Мядель &nbsp&nbsp (Минская обл)</option>
+                        <option value="19">Несвиж &nbsp &nbsp(Минская обл)</option>
+                        <option value="20">Слуцк &nbsp&nbsp (Минская обл)</option>
+                        <option value="21">Смолевичи &nbsp&nbsp (Минская обл)</option>
+                        <option value="22">Солигорск &nbsp &nbsp(Минская обл)</option>
+                        <option value="23">Старые дороги &nbsp&nbsp (Минская обл)</option>
+                        <option value="24">Столбцы &nbsp &nbsp(Минская обл)</option>
+                        <option value="25">Узда &nbsp&nbsp (Минская обл)</option>
+                        <option value="26">Фаниполь &nbsp&nbsp (Минская обл)</option>
+                        <option value="27">Червень &nbsp &nbsp(Минская обл)</option>
+                        <option class="mainCity" value="28">Витебск &nbsp &nbsp (областной центр)</option>
+                        <option value="29">Барань &nbsp &nbsp(Витебская обл)</option>
+                        <option value="30">Браслав &nbsp &nbsp(Витебская обл)</option>
+                        <option value="31">Верхнедвинск &nbsp &nbsp(Витебская обл)</option>
+                        <option value="32">Глубокое &nbsp &nbsp(Витебская обл)</option>
+                        <option value="33">Городок &nbsp &nbsp(Витебская обл)</option>
+                        <option value="34">Дисна &nbsp &nbsp(Витебская обл)</option>
+                        <option value="35">Докшицы &nbsp &nbsp(Витебская обл)</option>
+                        <option value="36">Дубровно &nbsp &nbsp(Витебская обл)</option>
+                        <option value="37">Лепель &nbsp &nbsp(Витебская обл)</option>
+                        <option value="38">Миоры &nbsp &nbsp(Витебская обл)</option>
+                        <option value="39">Новолукомль &nbsp &nbsp(Витебская обл)</option>
+                        <option value="40">Новополоцк &nbsp &nbsp(Витебская обл)</option>
+                        <option value="41">Орша &nbsp &nbsp(Витебская обл)</option>
+                        <option value="42">Полоцк &nbsp &nbsp(Витебская обл)</option>
+                        <option value="43">Поставы &nbsp &nbsp(Витебская обл)</option>
+                        <option value="44">Сенно &nbsp &nbsp(Витебская обл)</option>
+                        <option value="45">Толочин &nbsp &nbsp(Витебская обл)</option>
+                        <option value="46">Чашники &nbsp &nbsp(Витебская обл)</option>
+                        <option class="mainCity" value="47">Могилев &nbsp &nbsp (областной центр)</option>
+                        <option value="48">Бобруйск &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="49">Быхов &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="50">Горки &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="51">Кировск &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="52">Климовичи &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="53">Кличев &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="54">Костюковичи &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="55">Кричев &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="56">Мстиславль &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="57">Осиповичи &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="58">Славгород &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="59">Чаусы &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="60">Чериков &nbsp &nbsp(Могилевская обл)</option>
+                        <option value="61">Шклов &nbsp &nbsp(Могилевская обл)</option>
+                        <option class="mainCity" value="62">Гомель &nbsp &nbsp (областной центр)</option>
+                        <option value="63">Буда-Кошелево &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="64">Василевичи &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="65">Ветка &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="66">Добруш &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="67">Ельск &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="68">Житковичи &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="69">Жлобин &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="70">Калинковичи &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="71">Мозырь &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="72">Наровля &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="73">Петриков &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="74">Речица &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="75">Рогачев &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="76">Светлогорск &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="77">Туров &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="78">Хойники &nbsp &nbsp(Гомельская обл)</option>
+                        <option value="79">Чечерск &nbsp &nbsp(Гомельская обл)</option>
+                        <option class="mainCity" value="80">Брест &nbsp &nbsp (областной центр)</option>
+                        <option value="81">Барановичи &nbsp &nbsp(Брестская обл)</option>
+                        <option value="82">Белоозерск &nbsp &nbsp(Брестская обл)</option>
+                        <option value="83">Береза &nbsp &nbsp(Брестская обл)</option>
+                        <option value="84">Высокое &nbsp &nbsp(Брестская обл)</option>
+                        <option value="85">Ганцевичи &nbsp &nbsp(Брестская обл)</option>
+                        <option value="86">Давид-Городок &nbsp &nbsp(Брестская обл)</option>
+                        <option value="87">Драгичин &nbsp &nbsp(Брестская обл)</option>
+                        <option value="88">Жабинка &nbsp &nbsp(Брестская обл)</option>
+                        <option value="89">Иваново &nbsp &nbsp(Брестская обл)</option>
+                        <option value="90">Ивацевичи &nbsp &nbsp(Брестская обл)</option>
+                        <option value="91">Каменец &nbsp &nbsp(Брестская обл)</option>
+                        <option value="92">Кобрин &nbsp &nbsp(Брестская обл)</option>
+                        <option value="93">Коссово &nbsp &nbsp(Брестская обл)</option>
+                        <option value="94">Лунинец &nbsp &nbsp(Брестская обл)</option>
+                        <option value="95">Ляховичи &nbsp &nbsp(Брестская обл)</option>
+                        <option value="96">Малорита &nbsp &nbsp(Брестская обл)</option>
+                        <option value="97">Микашевичи &nbsp &nbsp(Брестская обл)</option>
+                        <option value="98">Пинск &nbsp &nbsp(Брестская обл)</option>
+                        <option value="99">Пружаны &nbsp &nbsp(Брестская обл)</option>
+                        <option value="100">Столин &nbsp &nbsp(Брестская обл)</option>
+                        <option class="mainCity" value="101">Гродно &nbsp &nbsp (областной центр)</option>
+                        <option value="102">Березовка &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="103">Волковыск &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="104">Дятлово &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="105">Ивье &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="106">Лида &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="107">Мосты &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="108">Новогрудок &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="109">Островец &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="110">Ошмяны &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="111">Свислочь &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="112">Скидель &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="113">Слоним &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="114">Сморгонь &nbsp &nbsp(Гродненская обл)</option>
+                        <option value="115">Щучин &nbsp &nbsp(Гродненская обл)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Отделим немножко основные данные от логина и пароля -->
+                    <!-- Просим адрес почты -->
+                    <label for="regMail">Адрес почты (Логин):<span class="regStar">*</span></label>
+                    <input class="regInput" type="text" id="regMail" name="regMail" maxlength="35">
+                    <br>
+                    <!-- Просим придумать пароль -->
+                    <label for="regPassword">Пароль:<span class="regStar">*</span></label>
+                    <input class="regInput" type="password" id="regPassword" name="regPassword" maxlength="35">
+                    <br>
+                    <!-- Просим повторить пароль, чтобы убедиться, что пользователь не ошибся при вводе -->
+                    <label for="repeatPassword">Повторить пароль:<span class="regStar">*</span></label>
+                    <input class="regInput" type="password" id="repeatPassword" name="repeatPassword" maxlength="35">
+                    <br>
+                    <br>
+                    <br>
+                    <!-- Сообщаем о полях, обязательных для заполнения -->
+                    <span class="regStar">*</span>- поля, помеченные звездочкой, обязательны для заполнения
+                    <br>
+                    <br>
+                    <!-- Фиксируем согласие пользователя с правилами сайта -->
+                    <input type="checkbox" name="regRules"> С <span id="regRules" class="regRules">правилами пользования</span> сайтом согласен
+                    <br>
+                    <br>
+                    <br>
+                    <!-- Оформляем кнопку регистрации -->
+                    <input id="submitButton" class="submitButton" type="submit" value="Зарегистрироваться">
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </section>
+        <!-- Подвал сайта -->
+        <footer id="footer_block">
+            <!-- Стрелка 'Наверх' (символ юникода) -->
+            <a href="../categories/form_page.html#pageUp" id="footer_up">&#9650; Наверх</a>
+            <!-- Блок с информацией об авторских правах -->
+            <address>
+                Copyright © <a href="http://belarusweb.net" target="_blank">belarusweb.net</a> 2017г.
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

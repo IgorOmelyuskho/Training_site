@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<!-- Подключаем внутреннюю таблицу стилей -->
+	<style type="text/css">
+	
+		*{
+		margin: 0;      								/* Обнуляем внешние отступы */
+		padding: 0;     								/* Обнуляем внутренние отступы */
+		outline: 0;     								/* Обнуляем толщину внешней границы */
+		line-height: 1; 								/* Задаем высоту строки */
+		}
+		
+		.map_img{                 						/* Оформляем карту на странице */
+		display: block;
+		width: 740px;
+		}
+		
+		#coords_div{                 					/* Класс для блока, в который будут записываться координаты */
+		position: absolute;
+		top: 10px;
+		left: 760px;
+		}
+	
+	</style>
+</head>
+<body>
+	<!-- В блок будут записываться координаты кликов -->
+	<div id="coords_div"></div>
+	
+	<!-- Изображение, карту которого нужно составить -->
+	<img src="regions_of_belarus.jpg" class="map_img" usemap="#regions_of_belarus" id="regions_of_belarus">
+		
+	<script>
+		//Объявляем функцию, которая будет выдавать нам координаты клика	
+		function coords(event){
+			//Находим блок, в который будем записывать координаты кликов
+			var coords_div = document.getElementById('coords_div');
+						
+			//Узнаем координаты х и у клика относительно левого верхнего угла тела документа
+			//а значит и нашего изображения, т.к. мы обнулили все отступы
+			var x=event.clientX;
+			var y=event.clientY;
+			//Вставляем полученные координаты в блок, при этом заранее отформатировав запись для вставки затем в теги <area>
+			coords_div.innerHTML+= x+','+y+', ';
+		}
+		
+		//Назначаем обработчик клика мыши телу документа
+		document.getElementById('regions_of_belarus').addEventListener('click', coords);
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Astakhov Access Degree LF';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Astakhov Access Degree LF'), local('Astakhov Access Degree LF-Regular'),
+    url(../fonts/11694.ttf) format('truetype');
+}
+
+.text_h_2 {
+    margin: 10px;
+    margin-top: 25px;
+    color: orange;
+    text-align: center;
+    font-size: 16px;
+    font-family: Corbel, Cambria;
+}
+
+.text_p_2 {
+    padding-top: 10px;
+    text-align: justify;
+    text-indent: 0.5em;
+}
+
+.text_p_3 {
+    padding-top: 10px;
+    text-align: justify;
+    text-indent: 0.5em;
+    line-height: 1.3;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+.text_p_4 {
+    padding-top: 10px;
+    font-family: Gabriola;
+    font-size: 20px;
+    color: #007700;
+    line-height: 22px;
+}
+
+.text_p_5 {
+    padding-top: 10px;
+    font-family: Astakhov Access Degree LF;
+    text-align: justify;
+    font-size: 16px;
+    line-height:1.5;
+}
+
+.text_p_6 {
+    padding-top: 10px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    word-break: break-all;
+}
+
+.text_p_7 {
+    padding-top: 10px;
+    text-align: justify;
+    font-family: Astakhov Access Degree LF;
+    color: blue;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+
+.text_div_7 {
+    margin-top: 15px;
+    border: 2px solid blue;
+}
+
+.text_p_8 {
+    float: left;
+    width: 45.7%;
+    margin: 1%;
+    padding: 7px;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.text_p_9 {
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

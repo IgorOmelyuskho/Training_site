@@ -1,0 +1,223 @@
+<!-- Страницу будем размечать при помощи HTML 5 -->
+<!DOCTYPE html>
+
+<!-- В качестве основного языка страницы указываем 'русский', а также используем элемент в качестве якоря для стрелки 'Наверх' -->
+<html lang="ru" id="pageUp">
+
+<!-- Оформляем заголовок документа со служебной информацией -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="author" content="Peter Romanovsky">
+    <meta name="copyright" content="belarusweb.net">
+    <meta name="document-state" content="dynamic">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit" content="1">
+    <link rel="stylesheet" href="../site_files/css/styles_1.css">
+    <link rel="stylesheet" href="../site_files/css/list_page.css">
+</head>
+	
+<body>	
+<!-- Главный блок-обертка сайта -->
+<div id="mainDiv"> 
+	
+	<!-- Шапка сайта -->
+	<header id="site_header">
+		<!-- Иконка сайта в левом углу -->
+		<img src="../site_files/images/site_icon.png" id="site_icon">
+		
+		<!-- Обычно ссылка ведет на главную страницу сайта -->
+		<a href="http://belarusweb.net">
+			<!-- Имя сайта я обычно располагаю в заголовке первого уровня. Так что все последующие заголовки будут более низкого уровня -->
+			<div id="site_name">
+				<h1 id="site_name_1">belarusweb.net</h1><br>
+				<span id="site_name_2">&nbsp;Основы создания сайтов!</span>
+			</div>
+		</a>
+		
+		<!-- Назовем это заголовком (title) сайта -->	
+		<span id="site_slogan">Учебный сайт на HTML+CSS!</span>
+		
+		<!-- Изображения-ссылки на страницы, например, с группами в соцсетях, привязанными к сайту -->
+		<a href="https://vk.com/belarusweb" target="_blank"><img src="../site_files/images/vk_1.png" id="vk_1_icon"></a>
+		<a href="https://ok.ru/group/53857572159678" target="_blank"><img src="../site_files/images/odnkl_1.png" id="odnkl_1_icon"></a>
+		<a href="https://www.facebook.com/belarusweb/" target="_blank"><img src="../site_files/images/fbk_1.png" id="fbk_1_icon"></a>
+			
+	</header>
+
+	<!-- Боковая панель навигации сайта -->
+	<nav id="site_nav">
+		<!-- Заголовок бокового меню -->
+		<div class="nav_header">Примеры верстки</div>
+		
+		<ul class="nav_menu">
+						
+			<li><a href="../index.html">Стартовая страница</a></li>
+										
+			<li><a href="empty_page.html">Пустая страница</a></li>
+			
+			<li><a href="text_page.html">Шрифты и текст</a></li>
+					
+			<li style="list-style-image: url('../site_files/images/circle_orange.png');"><a href="list_page.html">Использование списков</a></li>
+			
+			<li><a href=".table_page.html">Верстка таблиц</a></li>
+			
+			<li><a href="image_page.html">Работа с изображениями</a></li>
+			
+			<li><a href="map_page.html">Карта-изображение</a></li>
+			
+			<li><a href="form_page.html">Создание форм</a></li>
+			
+			<li><a href="animation_page.html">Примеры анимации</a></li>
+					
+		</ul>
+	</nav>
+
+	
+	
+	<!-- Тут будем отображать основное содержимое страницы -->
+	<section id="mainSection">
+		
+			
+	
+		<h2 class="list_h_2">Несколько советов по учебному процессу</h2>
+
+		<ul class="list_number">
+			<li>
+				Всегда набирайте код приводимых в учебниках примеров в редакторе. Подавляющую часть учебного времени вы должны проводить именно за 
+				набором кода. 
+			</li>
+			
+			<li>
+				Не пренебрегайте вопросами в конце каждого параграфа, пусть они и несколько однотипны. Ведь отвечая на них вы сможете реально убедиться, 
+				что теоретическая часть нового материала была усвоена достаточно хорошо. Если вы затрудняетесь ответить на какой-то из вопросов, кликните 
+				по нему и после перехода в нужное место параграфа повторите требуемый материал еще раз.
+			</li>
+			
+			<li>
+				Обязательно учите приводимые в конце каждого параграфа английские слова. Нужно не только знать, как они пишутся, нужно еще и понимать, что 
+				они означают. И вообще, стать хорошим программистом без знания хотя бы основ английского языка врядли получится. Поэтому, если вы решили 
+				серьезно заняться программированием, параллельно начинайте совершенствовать свои языковые навыки.
+			</li>
+			
+			<li>
+				Для лучшего закрепления изученного материала не пренебрегайте просмотром видеоуроков. 
+			</li>
+					
+			<li>
+				После изучения теоретического материала каждого параграфа приступайте к решению задач, закрепляя полученные знания на практике. Старайтесь 
+				решать задачи самостоятельно. И даже, если вы подсмотрели решение, закройте его и попытайтесь набрать код самостоятельно. Только после 
+				этого переходите к следующей задаче.
+			</li>
+		</ul>	
+		
+					
+		
+		<h2 class="list_h_2">Поры года</h2>
+		
+		<p class="list_p">
+			Для демонстрации создания вложенных списков используем поры года и соответствующие им месяцы года. При этом в качестве маркеров списков 
+			используем изображения.
+		</p>
+				
+		
+		<ul class="list_season">
+			<li>
+				Зима
+			
+				<ul class="list_month">
+					<li>
+						Декабрь
+					</li>
+					
+					<li>
+						Январь
+					</li>
+					
+					<li>
+						Февраль
+					</li>
+									
+				</ul>
+			</li>
+						
+			<li>Весна
+			
+				<ul class="list_month">
+					<li>
+						Март
+					</li>
+					
+					<li>
+						Апрель
+					</li>
+					
+					<li>
+						Май
+					</li>
+									
+				</ul>
+			</li>
+			
+									
+			<li>Лето
+			
+				<ul class="list_month">
+					<li>
+						Июнь
+					</li>
+					
+					<li>
+						Июль
+					</li>
+					
+					<li>
+						Август
+					</li>
+									
+				</ul>
+			</li>
+			
+									
+			<li>Осень
+			
+				<ul class="list_month">
+					<li>
+						Сентябрь
+					</li>
+					
+					<li>
+						Октябрь
+					</li>
+					
+					<li>
+						Ноябрь
+					</li>
+									
+				</ul>
+			</li>
+			
+		</ul>
+		
+	
+		
+	</section>	
+	
+
+	
+	<!-- Подвал сайта -->
+	<footer id="footer_block">
+		
+		<!-- Стрелка 'Наверх' (символ юникода) -->
+		<a href="../categories/list_page.html#pageUp" id="footer_up">&#9650; Наверх</a>
+		
+		<!-- Блок с информацией об авторских правах --> 
+		<address>
+			Copyright © <a href="http://belarusweb.net" target="_blank">belarusweb.net</a> 2017г.
+		</address> 
+			
+	</footer>
+
+</div>		
+</body>
+</html>

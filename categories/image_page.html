@@ -1,0 +1,121 @@
+<!-- Страницу будем размечать при помощи HTML 5 -->
+<!DOCTYPE html>
+<!-- В качестве основного языка страницы указываем 'русский', а также используем элемент в качестве якоря для стрелки 'Наверх' -->
+<html lang="ru" id="pageUp">
+<!-- Оформляем заголовок документа со служебной информацией -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="author" content="Peter Romanovsky">
+    <meta name="copyright" content="belarusweb.net">
+    <meta name="document-state" content="dynamic">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit" content="1">
+    <link rel="stylesheet" href="../site_files/css/styles_1.css">
+    <link rel="stylesheet" href="../site_files/css/image_page.css">
+</head>
+
+<body>
+    <!-- Главный блок-обертка сайта -->
+    <div id="mainDiv">
+        <!-- Шапка сайта -->
+        <header id="site_header">
+            <!-- Иконка сайта в левом углу -->
+            <img src="../site_files/images/site_icon.png" id="site_icon">
+            <!-- Обычно ссылка ведет на главную страницу сайта -->
+            <a href="http://belarusweb.net">
+                <!-- Имя сайта я обычно располагаю в заголовке первого уровня. Так что все последующие заголовки будут более низкого уровня -->
+                <div id="site_name">
+                    <h1 id="site_name_1">belarusweb.net</h1>
+                    <br>
+                    <span id="site_name_2">&nbsp;Основы создания сайтов!</span>
+                </div>
+            </a>
+            <!-- Назовем это заголовком (title) сайта -->
+            <span id="site_slogan">Учебный сайт на HTML+CSS!</span>
+            <!-- Изображения-ссылки на страницы, например, с группами в соцсетях, привязанными к сайту -->
+            <a href="https://vk.com/belarusweb" target="_blank"><img src="../site_files/images/vk_1.png" id="vk_1_icon"></a>
+            <a href="https://ok.ru/group/53857572159678" target="_blank"><img src="../site_files/images/odnkl_1.png" id="odnkl_1_icon"></a>
+            <a href="https://www.facebook.com/belarusweb/" target="_blank"><img src="../site_files/images/fbk_1.png" id="fbk_1_icon"></a>
+        </header>
+        <!-- Боковая панель навигации сайта -->
+        <nav id="site_nav">
+            <!-- Заголовок бокового меню -->
+            <div class="nav_header">Примеры верстки</div>
+            <ul class="nav_menu">
+                <li><a href="../index.html">Стартовая страница</a></li>
+                <li><a href="empty_page.html">Пустая страница</a></li>
+                <li><a href="text_page.html">Шрифты и текст</a></li>
+                <li><a href="list_page.html">Использование списков</a></li>
+                <li><a href="table_page.html">Верстка таблиц</a></li>
+                <li style="list-style-image: url('../site_files/images/circle_orange.png');"><a href="image_page.html">Работа с изображениями</a></li>
+                <li><a href="map_page.html">Карта-изображение</a></li>
+                <li><a href="form_page.html">Создание форм</a></li>
+                <li><a href="animation_page.html">Примеры анимации</a></li>
+            </ul>
+        </nav>
+        <!-- Тут будем отображать основное содержимое страницы -->
+        <section id="mainSection">
+            <h2 class="image_h_2">Вставляем в текст изображения</h2>
+            <p class="image_p">
+                <img src="../site_files/images/icon_css.png" class="image_img"> Для вставки изображений на веб-страницу используется элемент <span class="image_blue">'img'</span>, а путь к файлу изображения указывается в качестве значения его атрибута <span class="image_blue">'src'</span>. При этом разрешается использовать как абсолютную, так и относительную адресацию.
+            </p>
+            <p class="image_p">
+                Чтобы текст обтекал изображение слева или справа, необходимо сделать изображение плавающим при помощи свойства
+                <span class="image_blue">'float'</span>. Если нужно, чтобы данный элемент не обтекал плавающие элементы в коде выше, то для него можно использовать свойство <span class="image_blue">'clear'</span>.
+            </p>
+            <p class="image_p">
+                Также не стоит забывать, что исходный размер изображения можно изменять при помощи таблиц стилей. Поэтому по возможности нужно подбирать изображения с максимальным разрешением, чтобы качество изображения не ухудшалось при увеличении его размеров на странице.
+            </p>
+            <h2 class="image_h_2">Делаем простейшую фотогалерею</h2>
+            <div class="image_wrapper_div">
+                <!-- Документы с изображениями будем вставлять в данный фрейм -->
+                <iframe class="image_frame" name="image_frame" src="../site_files/galery/1.html"></iframe>
+                <!-- Навигацию галереи поместим в свой блок-обертку и при 
+			помощи стилей разместим его под фото по центру -->
+                <div class="galleryMenu">
+                    <a href="../site_files/galery/1.html" target="image_frame">1&nbsp;</a>
+                    <a href="../site_files/galery/2.html" target="image_frame">2&nbsp;</a>
+                    <a href="../site_files/galery/3.html" target="image_frame">3&nbsp;</a>
+                    <a href="../site_files/galery/4.html" target="image_frame">4&nbsp;</a>
+                    <a href="../site_files/galery/5.html" target="image_frame">5&nbsp;</a>
+                </div>
+            </div>
+            <p class="image_p">
+                Все изображения и веб-странички, которые вставляются во фрейм, находятся в одной папке. Код страниц практически идентичный. Изображения подобраны одинакового размера. Чтобы у фрейма не появлялись полосы прокрутки, содержимое его тела документа прячется.
+            </p>
+            <h2 class="image_h_2">Создаем свой курсор мыши</h2>
+            <p class="image_p">
+                Для того, чтобы в качестве курсора мыши установить свое изображение, необходимо в качестве значения свойства
+                <span class="image_blue">cursor</span> использовать путь к файлу изображения (например,
+                <span class="image_blue">cursor: url("smile.png"), auto;</span>). Разрешается указывать через запятую путевые адреса сразу к нескольким файлам изображений; при этом важно помнить, что поддерживаются не все форматы изображений, а только форматы <span class="image_blue">CUR, PNG, GIF, JPG</span> (анимация в формате <span class="image_blue">GIF</span> работать не будет, также старайтесь ограничивать размеры изображений в пределах <span class="image_blue">128x128</span> пикселей, т.к. изображения слишком больших размеров отображаться не будут); кроме того, после адреса или списка адресов нужно обязательно указать через запятую одно из стандартных значений (см. <span class="image_blue">&#167;5.5</span>). Ниже созданы несколько абзацев, при наведении на которые стандартный курсор будет изменен на наш собственный (смотрите оформление в таблице стилей).
+            </p>
+            <p class="image_p firstCursor">
+                В данном абзаце в качестве курсора мы использовали изображение в формате <span class="image_blue">GIF</span>. Однако анимация работать не будет, хотя само изображение показывается.
+            </p>
+            <p class="image_p secondCursor">
+                В данном абзаце в качестве курсора мы использовали изображение в формате <span class="image_blue">CUR</span>.
+            </p>
+            <p class="image_p thirdCursor">
+                В данном абзаце в качестве курсора мы использовали изображение в формате <span class="image_blue">PNG</span> размером
+                <span class="image_blue">32x32</span> пикселя.
+            </p>
+            <p class="image_p forthCursor">
+                А вот здесь будет использован стандартный курсор, т.к. мы превысили допустимый размер изображения на один пиксель (
+                <span class="image_blue">129x129</span> пикселей).
+            </p>
+        </section>
+        <!-- Подвал сайта -->
+        <footer id="footer_block">
+            <!-- Стрелка 'Наверх' (символ юникода) -->
+            <a href="../categories/image_page.html#pageUp" id="footer_up">&#9650; Наверх</a>
+            <!-- Блок с информацией об авторских правах -->
+            <address>
+                Copyright © <a href="http://belarusweb.net" target="_blank">belarusweb.net</a> 2017г.
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>
